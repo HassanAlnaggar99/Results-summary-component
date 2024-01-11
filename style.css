@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap');
+
+:root {
+  /* ## Colors */
+  /* ### Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  /* background */
+  --light-red-1: hsla(0, 100%, 67%, 0.1);
+  --orangey-yellow-1: hsla(39, 100%, 56%, 0.1);
+  --green-teal-1: hsla(166, 100%, 37%, 0.1);
+  --cobalt-blue-1: hsla(234, 85%, 45%, 0.1);
+  /* ## Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%); /* (background) */
+  --light-royal-blue: hsl(241, 81%, 54%); /* (background) */
+
+  --violet-blue: hsla(256, 72%, 46%, 1); /* (circle) */
+  --persian-blue: hsla(241, 72%, 46%, 0); /* (circle) */
+  /* ### Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%); /* / 100 */
+  --light-lavender: hsl(241, 100%, 89%); /* left pale */
+  --dark-gray-blue: hsl(224, 30%, 27%); /* Summary */
+  --grey: hsl(206.25deg 7.84% 60%);
+
+  --main-padding: 40px;
+  --b-radius: 24px;
+}
+* {
+  box-sizing: border-box;
+}
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+
+  background-color: var(--white);
+}
+main {
+  background-color: var(--white);
+  display: flex;
+  border-radius: var(--b-radius);
+  /* border: 2px solid black; */
+  width: 50%;
+}
+main > * {
+  width: 50%;
+  padding: var(--main-padding);
+}
+main .result {
+  background-image: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+  border-radius: var(--b-radius);
+  text-align: center;
+}
+main .result > div:first-child {
+  color: var(--light-lavender);
+  /* font-size: 1.5em; */
+  /* margin: 0 0 0.83em; */
+  font-size: 24px;
+  margin: 0 0 1.2em;
+  font-weight: 800;
+}
+main .result .circle {
+  background-image: linear-gradient(to bottom, var(--violet-blue), var(--persian-blue));
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+main .result .circle div:first-child{
+  color: var(--white);
+  font-size: 3em;
+  font-weight: 800;
+}
+main .result .circle div:nth-child(2){
+  color: var(--light-lavender);
+}
+main .result > div:nth-child(3){
+  color: var(--white);
+  font-size: 1.5em;
+  margin: 0.83em 0;
+  font-weight: 800;
+}
+main .result p {
+  color: var(--light-lavender)
+}
+main .summary {
+  background-color: var(--white);
+  border-radius: var(--b-radius);
+  color: var(--light-lavender);
+}
+main .summary > div:first-child {
+  color: var(--dark-gray-blue);
+  font-size: 24px;
+  margin: 0 0 1.2em;
+  font-weight: 800;
+}
+.summary .cards .card {
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 2px solid var(--pale-blue);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.summary .cards .card .left img {
+  width: 1em;
+  height: 1em;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.summary .cards .card .right {
+  font-weight: 800;
+  color: var(--grey);
+}
+.summary .cards .card .right span {
+  color: var(--dark-gray-blue);
+}
+.summary .cards .card:first-child {
+  background-color: var(--light-red-1);
+}
+.summary .cards .card:first-child .left {
+  color: var(--light-red);
+}
+.summary .cards .card:nth-child(2) {
+  background-color: var(--orangey-yellow-1);
+}
+.summary .cards .card:nth-child(2) .left {
+  color: var(--orangey-yellow);
+}
+.summary .cards .card:nth-child(3) {
+  background-color: var(--green-teal-1);
+}
+.summary .cards .card:nth-child(4) .left {
+  color: var(--green-teal);
+}
+.summary .cards .card:last-child {
+  background-color: var(--cobalt-blue-1);
+}
+.summary .cards .card:last-child .left {
+  color: var(--cobalt-blue);
+}
+.summary button {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+
+  font-size: 18px;
+  margin: 36px 0 0;
+  font-weight: 800;
+
+  /* font-size: 1.17em;
+  margin-top: 32px;
+  font-weight: 700; */
+  color: var(--white);
+  background-color: var(--dark-gray-blue);
+  border-radius: 36px;
+  border: none;
+}
+.summary button:hover,
+.summary button:focus {
+  background-image: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+  cursor: pointer;
+}
+
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 100%;
+    flex-direction: column;
+  }
+  main > * {
+    width: 100%;
+    padding: 24px;
+  }
+  main .result > div:first-child {
+    margin: 0 0 20px;
+  }
+  main .result .circle {
+    width: 140px;
+    height: 140px;
+  }
+  main .result > div:nth-child(3){
+    font-size: 1.5em;
+    margin: 0.5em 0;
+  }
+  main .summary > div:first-child {
+    margin: 0 0 20px;
+  }
+  .summary .cards .card {
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid var(--pale-blue);
+    border-radius: 6px;
+
+  }
+
+  .attribution {
+    display: none;
+  }
+}
