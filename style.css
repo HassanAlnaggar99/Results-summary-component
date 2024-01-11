@@ -191,7 +191,11 @@ main .summary > div:first-child {
   }
   main > * {
     width: 100%;
+    height: 100vh;
     padding: 24px;
+  }
+  main .result {
+    border-radius: 0 0 var(--b-radius) var(--b-radius);
   }
   main .result > div:first-child {
     margin: 0 0 20px;
